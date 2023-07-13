@@ -1,0 +1,411 @@
+@font-face {
+    font-family: JOST;
+    src: url(../assets/font/static/Jost-Black.ttf);
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 400vh;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 0.5fr repeat(5, 2fr) 0.5fr;
+    grid-template-columns: repeat(4, 0.5fr) ;
+    grid-template-areas: 
+        "header header header header"
+        "main main main main"
+        "main main main main"
+        "main main main main"
+        "main main main main"
+        "main main main main"        
+        "footer footer footer footer";
+    grid-column-gap: 10px ;
+    grid-row-gap: 10px ;
+    margin: 0 auto;
+    background-color: black;
+
+}
+
+header {
+ background-color: black;
+ grid-area: header;
+ display: flex;
+ flex-direction: row;
+ flex-wrap: nowrap;
+ font-family: JOST;
+ width: 100%;
+
+ 
+
+ }
+
+nav {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+header nav div ul li a {
+    text-decoration: none;
+    color: aliceblue;
+    list-style: none;
+    font-size: 1rem;
+    text-decoration: none;
+    margin-right: 30px;
+    font-size: 1rem;
+
+
+}
+
+li a:hover {
+    font-size: 1.5rem;
+}
+header nav div ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+
+
+}
+
+#logo {
+    flex-grow: 1;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#navheader {
+    text-decoration: none;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    align-items: end;  
+    width: 100%; 
+}
+
+
+main {
+    height: 100%;
+    background-color: white;
+    display: grid;
+    grid-area: main;
+    grid-template-rows: repeat(5, 2fr);
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: 
+        "main main main main"
+        "main main main main"
+        "main main main main"
+        "sectionuno sectionuno sectiondos sectiondos"
+        "sectionuno sectionuno sectiondos sectiondos"
+
+        ;
+
+
+ }
+
+
+#imagemain {
+    
+    display: flexbox;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 200%;
+    justify-content: center;
+    align-items: center;
+}
+#imagemain img {
+    width: 200% ;
+ 
+}
+#sectionuno {
+    background-color: black;
+    grid-area: sectionuno;
+    color: aquamarine;
+    font-family: JOST;
+    border-radius: 15px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    margin:  0px 15px 15px 15px;
+
+
+}
+#sectionuno p{
+    margin: 30px;
+}
+
+#sectiondos {
+
+    grid-area: sectiondos;
+    background-color: aquamarine;
+    border-radius: 15px;
+    height: 400px;
+    margin:  0px 15px 15px 15px;
+
+
+}
+
+footer {
+
+    background-color: black;
+    grid-area: footer;
+    color: antiquewhite;
+    display: flex;
+    height: 200px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    
+
+
+}
+
+
+#dirfooter li{
+    font-family: JOST;
+    text-decoration: none;
+    list-style: none;
+    color: whitesmoke;
+    font-size: 1rem;
+    display: flex;
+    align-self: flex-end;
+    justify-content: end;
+
+}
+
+#imgfooter img{
+    height: 150px;
+    
+
+}
+
+#maincontact {
+    height: 30%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    background-color: black;
+
+
+}
+
+main form {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    font-family: JOST;
+    
+}
+
+main form div {
+
+    font-family: JOST;
+    text-decoration: none;
+    color: bisque;
+    font-size: 2rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    
+
+}
+input {
+  
+    font-family: Jost;
+    font-size: 1rem;
+    height: 50px;
+    width: 500px;
+    text-align: center;
+    border-radius: 10px;
+    text-decoration: none;
+   
+    
+}
+div a {
+    text-decoration: none;
+    color: bisque;
+}
+
+
+@media screen and (max-width: 1200px) {
+
+   
+}
+
+@media screen and (max-width: 1024px) {
+
+   
+}
+
+@media screen and (max-width: 850px) {
+
+    body {
+        margin: 0 auto;
+    }
+    nav {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+
+    }
+    #navheader {
+        text-decoration: none;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;  
+        width: 100%; 
+    }
+    
+   
+}
+@media screen and (max-width: 660px) {
+    body {
+        margin: 0 auto;
+    }
+
+
+    header nav div ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+       
+    }
+    #navheader {
+        text-decoration: none;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;  
+        width: 100%; 
+    }
+    main {
+        height: 100%;
+        background-color: white;
+        display: grid;
+        grid-area: main;
+        grid-template-rows: repeat(5, 2fr);
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas: 
+            "main main main main"
+            "main main main main"
+            "main main main main"
+            "sectionuno sectionuno sectionuno sectionuno"
+            "sectiondos sectiondos sectiondos sectiondos"
+        ;
+      
+     }
+     #sectionuno {
+        background-color: black;
+        grid-area: sectionuno;
+        color: aquamarine;
+        font-family: JOST;
+        border-radius: 15px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 400px;
+        margin:  0px 15px 15px 15px;
+    
+    
+    }
+    #sectionuno p{
+        margin: 30px;
+        font-size: 1rem;
+    }
+    
+    #sectiondos {
+    
+        grid-area: sectiondos;
+        background-color: aquamarine;
+        border-radius: 15px;
+        height: 400px;
+        margin:  0px 15px 15px 15px;
+    
+    
+    }
+    
+    #imgfooter img{
+        height: 100px;
+        
+    
+    }
+    main form div {
+
+        font-family: JOST;
+        text-decoration: none;
+        color: bisque;
+        font-size: 1rem;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        
+    
+    }
+
+    input {
+  
+        font-family: Jost;
+        font-size: 1rem;
+        height: 50px;
+        width: 300px;
+        text-align: center;
+        border-radius: 10px;
+        text-decoration: none;
+       
+        
+    }
+
+    
+    
+
+   
+}
+@media screen and (max-width: 375px) {
+
+   
+}
+@media screen and (max-width: 320px) {
+    
+}
